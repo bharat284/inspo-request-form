@@ -3,6 +3,8 @@ import { useState } from "react";
 import { InspectionFormHeader } from "./InspectionFormHeader";
 import { InspectionFormTable } from "./InspectionFormTable";
 import { InspectionFormFooter } from "./InspectionFormFooter";
+import formStorage from "../services/formStorage";
+import { useToast } from "@/components/ui/use-toast";
 
 export interface InspectionRow {
   id: string;
@@ -41,6 +43,8 @@ export interface InspectionFormData {
 }
 
 export const InspectionForm = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<InspectionFormData>({
     inspectionTypes: {
       fabricInspection: false,
@@ -132,10 +136,50 @@ export const InspectionForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would typically send the data to a server or perform other actions
+    setIsSubmitting(true);
+    
+    try {
+      // Store the form data
+      const result = await formStorage.saveForm(formData);
+      
+      if (result.success) {
+        toast({
+          title: "Form Submitted Successfully",
+          description: "Your inspection request has been saved. Reference ID: " + result.id,
+        });
+        
+        // Reset form after successful submission
+        setFormData({
+          inspectionTypes: {
+            fabricInspection: false,
+            firstBatchInspection: false,
+            garmentInLine: false,
+            garmentFinalInspection: false,
+            containerLoading: false,
+          },
+          date: new Date().toISOString().split('T')[0],
+          rows: [createEmptyRow()],
+          preparedBy: "",
+        });
+      } else {
+        toast({
+          title: "Error Submitting Form",
+          description: result.error || "There was an error saving your inspection request.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -162,9 +206,12 @@ export const InspectionForm = () => {
       <div className="mt-6 flex justify-end">
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          disabled={isSubmitting}
+          className={`px-4 py-2 bg-aileron-blue text-white rounded hover:bg-aileron-mediumblue transition-colors ${
+            isSubmitting ? "opacity-70 cursor-not-allowed" : ""
+          }`}
         >
-          Submit Form
+          {isSubmitting ? "Submitting..." : "Submit Form"}
         </button>
       </div>
     </form>

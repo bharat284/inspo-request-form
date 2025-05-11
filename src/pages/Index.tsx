@@ -2,13 +2,16 @@
 import { Button } from "@/components/ui/button";
 import { InspectionForm } from "@/components/InspectionForm";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const Index = () => {
   const [currentTab, setCurrentTab] = useState<'home' | 'form'>('home');
   
   return (
     <div className="min-h-screen bg-white">
-      <header className="bg-white shadow-sm">
+      <header className="fixed w-full top-0 z-50 bg-white shadow-sm">
         <div className="container mx-auto p-4 flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <img 
@@ -24,27 +27,27 @@ const Index = () => {
             >
               Home
             </button>
-            <button 
-              onClick={() => setCurrentTab('form')}
-              className={`text-sm font-medium transition-colors ${currentTab === 'form' ? 'text-black' : 'text-gray-500 hover:text-black'}`}
+            <Link 
+              to="/v1/inspection-form" 
+              className="text-sm font-medium text-gray-500 hover:text-black transition-colors"
             >
-              Inspection Request
-            </button>
-            <a href="#services" className="text-sm font-medium text-gray-500 hover:text-black transition-colors">Services</a>
-            <a href="#about" className="text-sm font-medium text-gray-500 hover:text-black transition-colors">About</a>
-            <a href="#contact" className="text-sm font-medium text-gray-500 hover:text-black transition-colors">Contact</a>
+              Request Form
+            </Link>
+            <Link to="/services" className="text-sm font-medium text-gray-500 hover:text-black transition-colors">Services</Link>
+            <Link to="/about" className="text-sm font-medium text-gray-500 hover:text-black transition-colors">About</Link>
+            <Link to="/contact" className="text-sm font-medium text-gray-500 hover:text-black transition-colors">Contact</Link>
           </nav>
           <Button 
             variant="default" 
             className="bg-black text-white hover:bg-gray-800 hidden md:inline-flex"
-            onClick={() => setCurrentTab('form')}
+            asChild
           >
-            Request Inspection
+            <Link to="/v1/inspection-form">Request Inspection</Link>
           </Button>
         </div>
       </header>
 
-      <main>
+      <main className="pt-20">
         {currentTab === 'home' ? (
           <>
             <section className="py-20 bg-gray-50">
@@ -61,12 +64,12 @@ const Index = () => {
                       variant="default" 
                       size="lg" 
                       className="bg-black text-white hover:bg-gray-800"
-                      onClick={() => setCurrentTab('form')}
+                      asChild
                     >
-                      Request Inspection
+                      <Link to="/v1/inspection-form">Request Inspection</Link>
                     </Button>
-                    <Button variant="outline" size="lg">
-                      Learn More
+                    <Button variant="outline" size="lg" asChild>
+                      <Link to="/services">Learn More</Link>
                     </Button>
                   </div>
                 </div>
@@ -120,13 +123,31 @@ const Index = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Address</h3>
-                      <p className="text-gray-600">123 Inspection Avenue</p>
-                      <p className="text-gray-600">Quality City, QC 12345</p>
+                      <div className="flex items-start gap-2">
+                        <MapPin className="h-5 w-5 text-gray-500 shrink-0 mt-0.5" />
+                        <p className="text-gray-600">
+                          1st Floor, 724/A, Nyay Khand-3, Indirapuram<br />
+                          Ghaziabad - 201012<br />
+                          U.P. India
+                        </p>
+                      </div>
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold mb-2">Contact Information</h3>
-                      <p className="text-gray-600">Email: info@colombus-ia.com</p>
-                      <p className="text-gray-600">Phone: +1 (555) 123-4567</p>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <Mail className="h-5 w-5 text-gray-500" />
+                          <a href="mailto:info@colombusinspectionagency.com" className="text-gray-600">info@colombusinspectionagency.com</a>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Phone className="h-5 w-5 text-gray-500" />
+                          <a href="tel:+918920465078" className="text-gray-600">+91 8920465078</a>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Phone className="h-5 w-5 text-gray-500" />
+                          <a href="tel:+919625912724" className="text-gray-600">+91 9625912724</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -141,50 +162,7 @@ const Index = () => {
         )}
       </main>
 
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-              <img 
-                src="/lovable-uploads/518bcfa0-fc1f-40e5-b963-86efb8897d05.png" 
-                alt="Colombus Inspection Agency Logo" 
-                className="h-10 mb-4 invert"
-              />
-              <p className="text-gray-400 text-sm mt-2">
-                Your trusted partner in quality inspection services.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Fabric Inspection</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Garment Inspection</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Container Loading</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium mb-4">Resources</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Inspection Standards</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">Quality Control Guide</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white text-sm">FAQs</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-medium mb-4">Contact</h3>
-              <ul className="space-y-2">
-                <li className="text-gray-400 text-sm">123 Inspection Avenue</li>
-                <li className="text-gray-400 text-sm">Quality City, QC 12345</li>
-                <li className="text-gray-400 text-sm">info@colombus-ia.com</li>
-                <li className="text-gray-400 text-sm">+1 (555) 123-4567</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-6 text-center text-sm text-gray-400">
-            © {new Date().getFullYear()} Colombus Inspection Agency. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
