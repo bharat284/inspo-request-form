@@ -10,7 +10,7 @@ interface InspectionFormHeaderProps {
     containerLoading: boolean;
   };
   date: string;
-  onInspectionTypeChange: (type: keyof typeof inspectionTypes) => void;
+  onInspectionTypeChange: (type: keyof InspectionFormHeaderProps["inspectionTypes"]) => void;
   onDateChange: (date: string) => void;
 }
 
