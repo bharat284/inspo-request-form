@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -52,8 +51,8 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
     
     /* Form specific colors */
-    --form-highlight: 60 100% 50%;
-    --form-border: 0 0% 80%;
+    --form-highlight: 206 72% 68%;
+    --form-border: 207 75% 43%;
   }
 
   .dark {
@@ -94,8 +93,8 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
     
     /* Form specific colors */
-    --form-highlight: 60 100% 50%;
-    --form-border: 0 0% 60%;
+    --form-highlight: 206 72% 68%;
+    --form-border: 207 75% 43%;
   }
 }
 
@@ -115,25 +114,25 @@
 }
 
 .highlight-bg {
-  @apply bg-yellow-300;
+  @apply bg-aileron-lightblue/20;
 }
 
 .form-table {
-  @apply w-full border-collapse border-2 border-gray-400;
+  @apply w-full border-collapse border-2 border-aileron-mediumblue;
 }
 
 .form-table th, .form-table td {
-  @apply border border-gray-400 p-1 text-sm;
+  @apply border border-aileron-blue p-1 text-sm;
 }
 
 .form-table th {
-  @apply font-semibold bg-gray-100;
+  @apply font-semibold bg-aileron-lightblue/30 text-aileron-darkblue;
 }
 
 .inspection-checkbox {
-  @apply mr-2 h-4 w-4;
+  @apply mr-2 h-4 w-4 accent-aileron-blue;
 }
 
 .small-checkbox {
-  @apply w-4 h-4 border border-gray-300 rounded;
+  @apply w-4 h-4 border border-aileron-blue rounded accent-aileron-blue;
 }

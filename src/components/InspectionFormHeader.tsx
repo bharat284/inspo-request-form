@@ -22,13 +22,13 @@ export const InspectionFormHeader = ({
 }: InspectionFormHeaderProps) => {
   return (
     <div className="mb-4">
-      <h1 className="text-xl md:text-2xl font-bold text-center border-b-2 border-gray-400 pb-2 mb-4">
+      <h1 className="text-xl md:text-2xl font-bold text-center border-b-2 border-aileron-blue pb-2 mb-4 text-aileron-darkblue">
         INSPECTION REQUEST FORM
       </h1>
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 mb-4">
         <div className="col-span-1 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="highlight-bg p-1 flex items-center">
+          <div className="bg-aileron-lightblue/20 border border-aileron-blue p-1 flex items-center rounded-md">
             <InspectionTypeCheckbox
               id="fabricInspection"
               label="FABRIC INSPECTION"
@@ -37,7 +37,7 @@ export const InspectionFormHeader = ({
             />
           </div>
           
-          <div className="highlight-bg p-1 flex items-center">
+          <div className="bg-aileron-lightblue/20 border border-aileron-blue p-1 flex items-center rounded-md">
             <InspectionTypeCheckbox
               id="firstBatchInspection"
               label="FIRST BATCH INSPECTION"
@@ -46,7 +46,7 @@ export const InspectionFormHeader = ({
             />
           </div>
           
-          <div className="highlight-bg p-1 flex items-center">
+          <div className="bg-aileron-lightblue/20 border border-aileron-blue p-1 flex items-center rounded-md">
             <InspectionTypeCheckbox
               id="garmentInLine"
               label="GARMENT IN-LINE"
@@ -55,7 +55,7 @@ export const InspectionFormHeader = ({
             />
           </div>
           
-          <div className="highlight-bg p-1 flex items-center">
+          <div className="bg-aileron-lightblue/20 border border-aileron-blue p-1 flex items-center rounded-md">
             <InspectionTypeCheckbox
               id="garmentFinalInspection"
               label="GARMENT FINAL INSPECTION"
@@ -64,7 +64,7 @@ export const InspectionFormHeader = ({
             />
           </div>
           
-          <div className="highlight-bg p-1 flex items-center">
+          <div className="bg-aileron-lightblue/20 border border-aileron-blue p-1 flex items-center rounded-md">
             <InspectionTypeCheckbox
               id="containerLoading"
               label="CONTAINER LOADING"
@@ -74,14 +74,14 @@ export const InspectionFormHeader = ({
           </div>
         </div>
         
-        <div className="highlight-bg p-1 flex items-center justify-between">
-          <label htmlFor="date" className="font-semibold">Date:</label>
+        <div className="bg-aileron-lightblue/20 border border-aileron-blue p-1 flex items-center justify-between rounded-md">
+          <label htmlFor="date" className="font-semibold text-aileron-darkblue">Date:</label>
           <input
             type="date"
             id="date"
             value={date}
             onChange={(e) => onDateChange(e.target.value)}
-            className="border border-gray-300 p-1"
+            className="border border-aileron-mediumblue rounded p-1"
           />
         </div>
       </div>

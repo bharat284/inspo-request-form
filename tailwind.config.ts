@@ -61,7 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Adding the Aileron color palette
+				aileron: {
+					lightblue: "#7ABBE2",
+					blue: "#4A9ADA",
+					mediumblue: "#2B7BBE",
+					darkblue: "#1A4F7A",
+					gray: "#403E43",
+					text: "#222222",
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
