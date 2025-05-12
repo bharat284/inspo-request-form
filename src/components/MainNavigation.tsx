@@ -32,7 +32,11 @@ export const MainNavigation = () => {
     };
   }, [scrolled]);
 
-  const isActive = (path: string) => location.pathname === path;
+  // Check if the current path starts with the given path
+  const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(`${path}/`);
+  
+  // Get the base path depending on version (v1 or v2)
+  const basePath = location.pathname.startsWith("/v1") ? "/v1" : "";
 
   return (
     <header 
@@ -45,21 +49,23 @@ export const MainNavigation = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center space-x-2">
-          <img 
-            src="/lovable-uploads/518bcfa0-fc1f-40e5-b963-86efb8897d05.png" 
-            alt="Colombus Inspection Agency Logo" 
-            className="h-12"
-          />
+          <Link to={basePath === "/v1" ? "/v1" : "/"}>
+            <img 
+              src="/lovable-uploads/518bcfa0-fc1f-40e5-b963-86efb8897d05.png" 
+              alt="Colombus Inspection Agency Logo" 
+              className="h-12"
+            />
+          </Link>
         </div>
         
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/">
+              <Link to={basePath === "/v1" ? "/v1" : "/"}>
                 <NavigationMenuLink 
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    isActive("/") && "bg-accent text-accent-foreground"
+                    (isActive("/") || isActive("/v1") && basePath === "/v1") && "bg-accent text-accent-foreground"
                   )}
                 >
                   Home
@@ -72,10 +78,11 @@ export const MainNavigation = () => {
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {[
-                    { title: "Fabric Inspection", path: "/services/fabric-inspection" },
-                    { title: "Garment Inspection", path: "/services/garment-inspection" },
-                    { title: "First Batch Inspection", path: "/services/first-batch-inspection" },
-                    { title: "Container Loading", path: "/services/container-loading" },
+                    { title: "Fabric Inspection", path: `${basePath}/services/fabric-inspection` },
+                    { title: "First Batch Inspection", path: `${basePath}/services/first-batch-inspection` },
+                    { title: "Garment In-Line Inspection", path: `${basePath}/services/garment-inline-inspection` },
+                    { title: "Garment Final Inspection", path: `${basePath}/services/garment-final-inspection` },
+                    { title: "Container Loading", path: `${basePath}/services/container-loading` },
                   ].map((service) => (
                     <li key={service.title} className="row-span-1">
                       <Link to={service.path}>
@@ -92,11 +99,11 @@ export const MainNavigation = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/about">
+              <Link to={`${basePath}/about`}>
                 <NavigationMenuLink 
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    isActive("/about") && "bg-accent text-accent-foreground"
+                    isActive(`${basePath}/about`) && "bg-accent text-accent-foreground"
                   )}
                 >
                   About
@@ -105,11 +112,11 @@ export const MainNavigation = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to="/contact">
+              <Link to={`${basePath}/contact`}>
                 <NavigationMenuLink 
                   className={cn(
                     navigationMenuTriggerStyle(),
-                    isActive("/contact") && "bg-accent text-accent-foreground"
+                    isActive(`${basePath}/contact`) && "bg-accent text-accent-foreground"
                   )}
                 >
                   Contact
@@ -122,7 +129,7 @@ export const MainNavigation = () => {
         <Button 
           variant="default" 
           className="bg-aileron-blue text-white hover:bg-aileron-mediumblue hidden md:inline-flex"
-          onClick={() => window.location.href = "/inspection-form"}
+          onClick={() => window.location.href = `${basePath}/inspection-form`}
         >
           Request Inspection
         </Button>
