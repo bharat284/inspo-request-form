@@ -1,5 +1,5 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 
@@ -9,7 +9,7 @@ export const VersionSwitcher = () => {
   const [isOpen, setIsOpen] = useState(false);
   
   // Determine if we're on V1 or V2
-  const isV1 = location.pathname === "/v1";
+  const isV1 = location.pathname.startsWith("/v1");
   
   const switchVersion = () => {
     if (isV1) {
