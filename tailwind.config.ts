@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -62,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Adding the Aileron color palette
+				// Adding the Aileron color palette (V1 & V2)
 				aileron: {
 					lightblue: "#7ABBE2",
 					blue: "#4A9ADA",
@@ -70,6 +71,17 @@ export default {
 					darkblue: "#1A4F7A",
 					gray: "#403E43",
 					text: "#222222",
+				},
+				// Adding the new V3 color palette
+				cia: {
+					darkpurple: "#2A1B3D",
+					navy: "#44224B",
+					purple: "#7B4397",
+					brightpurple: "#DC39FC",
+					lightpurple: "#B565A7",
+					accent: "#E056FD",
+					gray: "#6B7280",
+					lightgray: "#F3F4F6",
 				},
 			},
 			borderRadius: {

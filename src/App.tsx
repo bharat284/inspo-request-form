@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import IndexV2 from "./pages/IndexV2";
+import IndexV3 from "./pages/IndexV3";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
@@ -24,7 +25,15 @@ const App = () => (
       <BrowserRouter>
         <VersionSwitcher />
         <Routes>
-          {/* V2 Routes */}
+          {/* V3 Routes */}
+          <Route path="/v3" element={<IndexV3 />} />
+          <Route path="/v3/about" element={<About />} />
+          <Route path="/v3/contact" element={<Contact />} />
+          <Route path="/v3/services" element={<Services />} />
+          <Route path="/v3/services/:serviceType" element={<ServiceDetail />} />
+          <Route path="/v3/inspection-form" element={<InspectionFormPage />} />
+          
+          {/* V2 Routes (Default) */}
           <Route path="/" element={<IndexV2 />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
