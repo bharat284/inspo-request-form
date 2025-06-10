@@ -207,7 +207,7 @@ export const InspectionForm = () => {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`px-4 py-2 bg-aileron-blue text-white rounded hover:bg-aileron-mediumblue transition-colors ${
+          className={`px-4 py-2 bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white rounded hover:from-cia-accent hover:to-cia-brightpurple transition-all duration-300 ${
             isSubmitting ? "opacity-70 cursor-not-allowed" : ""
           }`}
         >

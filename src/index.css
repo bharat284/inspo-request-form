@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -108,31 +109,35 @@
   }
 }
 
-/* Inspection form specific styles */
+/* Inspection form specific styles - Updated for V3 */
 .inspection-form {
   @apply w-full max-w-7xl mx-auto;
 }
 
 .highlight-bg {
-  @apply bg-aileron-lightblue/20;
+  @apply bg-cia-brightpurple/20 backdrop-blur-sm;
 }
 
 .form-table {
-  @apply w-full border-collapse border-2 border-aileron-mediumblue;
+  @apply w-full border-collapse border-2 border-cia-brightpurple/40;
 }
 
 .form-table th, .form-table td {
-  @apply border border-aileron-blue p-1 text-sm;
+  @apply border border-cia-brightpurple/30 p-1 text-sm;
 }
 
 .form-table th {
-  @apply font-semibold bg-aileron-lightblue/30 text-aileron-darkblue;
+  @apply font-semibold bg-cia-brightpurple/20 text-white;
+}
+
+.form-table input {
+  @apply bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 border-cia-brightpurple/30;
 }
 
 .inspection-checkbox {
-  @apply mr-2 h-4 w-4 accent-aileron-blue;
+  @apply mr-2 h-4 w-4 accent-cia-brightpurple;
 }
 
 .small-checkbox {
-  @apply w-4 h-4 border border-aileron-blue rounded accent-aileron-blue;
+  @apply w-4 h-4 border border-cia-brightpurple/40 rounded accent-cia-brightpurple;
 }
