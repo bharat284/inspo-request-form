@@ -27,7 +27,7 @@ export const HeroSectionV3 = () => {
               className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple px-8 py-4 text-lg"
               asChild
             >
-              <Link to="/v3/inspection-form">
+              <Link to="/inspection-form">
                 Request Inspection <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
@@ -36,7 +36,7 @@ export const HeroSectionV3 = () => {
               className="bg-white text-cia-brightpurple hover:bg-gray-100 border border-cia-brightpurple px-8 py-4 text-lg"
               asChild
             >
-              <Link to="/v3/services">
+              <Link to="/services">
                 Our Services
               </Link>
             </Button>

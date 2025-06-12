@@ -26,18 +26,18 @@ export const FooterV3 = () => {
           <div>
             <h3 className="text-lg font-medium mb-4 text-white">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/v3/services/fabric-inspection" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Fabric Inspection</Link></li>
-              <li><Link to="/v3/services/garment-final-inspection" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Garment Inspection</Link></li>
-              <li><Link to="/v3/services/container-loading" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Container Loading</Link></li>
+              <li><Link to="/services/fabric-inspection" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Fabric Inspection</Link></li>
+              <li><Link to="/services/garment-final-inspection" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Garment Inspection</Link></li>
+              <li><Link to="/services/container-loading" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Container Loading</Link></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-medium mb-4 text-white">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/v3/about" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">About Us</Link></li>
-              <li><Link to="/v3/services" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Our Services</Link></li>
-              <li><Link to="/v3/contact" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Contact</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">About Us</Link></li>
+              <li><Link to="/services" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Our Services</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-cia-brightpurple text-sm transition-colors">Contact</Link></li>
             </ul>
           </div>
           

@@ -40,7 +40,7 @@ export const AboutSectionV3 = () => {
               className="border-cia-brightpurple text-cia-brightpurple hover:bg-cia-brightpurple hover:text-white"
               asChild
             >
-              <Link to="/v3/about">Learn More About Us</Link>
+              <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>
 

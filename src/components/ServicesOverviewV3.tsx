@@ -10,31 +10,31 @@ export const ServicesOverviewV3 = () => {
       icon: Search,
       title: "Fabric Inspection",
       description: "Comprehensive fabric quality analysis including weight, color, and defect detection.",
-      path: "/v3/services/fabric-inspection"
+      path: "/services/fabric-inspection"
     },
     {
       icon: ClipboardList,
       title: "First Batch Inspection",
       description: "Initial production verification to ensure quality standards before full manufacturing.",
-      path: "/v3/services/first-batch-inspection"
+      path: "/services/first-batch-inspection"
     },
     {
       icon: Package,
       title: "Garment In-Line Inspection",
       description: "Real-time quality monitoring during the production process.",
-      path: "/v3/services/garment-inline-inspection"
+      path: "/services/garment-inline-inspection"
     },
     {
       icon: CheckSquare,
       title: "Garment Final Inspection",
       description: "Thorough examination of finished garments before shipping.",
-      path: "/v3/services/garment-final-inspection"
+      path: "/services/garment-final-inspection"
     },
     {
       icon: Truck,
       title: "Container Loading",
       description: "Verification of proper packing and loading for safe transportation.",
-      path: "/v3/services/container-loading"
+      path: "/services/container-loading"
     }
   ];
 
@@ -74,7 +74,7 @@ export const ServicesOverviewV3 = () => {
             className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"
             asChild
           >
-            <Link to="/v3/services">View All Services</Link>
+            <Link to="/services">View All Services</Link>
           </Button>
         </div>
       </div>

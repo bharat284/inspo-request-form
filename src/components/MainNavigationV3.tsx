@@ -34,7 +34,6 @@ export const MainNavigationV3 = () => {
   }, [scrolled]);
 
   const isActive = (path: string) => location.pathname === path || location.pathname.startsWith(`${path}/`);
-  const basePath = "/v3";
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -56,7 +55,7 @@ export const MainNavigationV3 = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
         <div className="flex items-center space-x-3">
-          <Link to="/v3" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-gradient-to-br from-cia-brightpurple to-cia-accent rounded-lg flex items-center justify-center">
               <img 
                 src="/lovable-uploads/7f13fd27-c4b7-4d3d-b49d-c7c3bede087e.png" 
@@ -72,11 +71,11 @@ export const MainNavigationV3 = () => {
         <NavigationMenu className="hidden md:flex">
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/v3">
+              <Link to="/">
                 <NavigationMenuLink 
                   className={cn(
                     "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
-                    isActive("/v3") && "text-cia-accent bg-cia-brightpurple/10"
+                    isActive("/") && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   Home
@@ -85,11 +84,11 @@ export const MainNavigationV3 = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to={`${basePath}/services`}>
+              <Link to="/services">
                 <NavigationMenuLink 
                   className={cn(
                     "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
-                    isActive(`${basePath}/services`) && "text-cia-accent bg-cia-brightpurple/10"
+                    isActive("/services") && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   Our Services
@@ -98,11 +97,11 @@ export const MainNavigationV3 = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to={`${basePath}/about`}>
+              <Link to="/about">
                 <NavigationMenuLink 
                   className={cn(
                     "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
-                    isActive(`${basePath}/about`) && "text-cia-accent bg-cia-brightpurple/10"
+                    isActive("/about") && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   About
@@ -111,11 +110,11 @@ export const MainNavigationV3 = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <Link to={`${basePath}/contact`}>
+              <Link to="/contact">
                 <NavigationMenuLink 
                   className={cn(
                     "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
-                    isActive(`${basePath}/contact`) && "text-cia-accent bg-cia-brightpurple/10"
+                    isActive("/contact") && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   Contact
@@ -137,7 +136,7 @@ export const MainNavigationV3 = () => {
         <Button 
           variant="default" 
           className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple hidden md:inline-flex border-0"
-          onClick={() => window.location.href = `${basePath}/inspection-form`}
+          onClick={() => window.location.href = "/inspection-form"}
         >
           Request Inspection
         </Button>
@@ -148,28 +147,28 @@ export const MainNavigationV3 = () => {
         <div className="md:hidden fixed inset-0 top-16 bg-white/95 backdrop-blur-md border-t border-cia-brightpurple/20">
           <nav className="flex flex-col p-6 space-y-4">
             <Link 
-              to="/v3" 
+              to="/" 
               className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link 
-              to={`${basePath}/services`} 
+              to="/services" 
               className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
               Our Services
             </Link>
             <Link 
-              to={`${basePath}/about`} 
+              to="/about" 
               className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
               About
             </Link>
             <Link 
-              to={`${basePath}/contact`} 
+              to="/contact" 
               className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
@@ -178,7 +177,7 @@ export const MainNavigationV3 = () => {
             <Button 
               className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white mt-4"
               onClick={() => {
-                window.location.href = `${basePath}/inspection-form`;
+                window.location.href = "/inspection-form";
                 toggleMenu();
               }}
             >

@@ -64,7 +64,7 @@ export const ContactSectionV3 = () => {
                 className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"
                 asChild
               >
-                <Link to="/v3/contact">
+                <Link to="/contact">
                   Contact Us <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -73,7 +73,7 @@ export const ContactSectionV3 = () => {
                 className="bg-white text-cia-brightpurple hover:bg-gray-100 border border-cia-brightpurple"
                 asChild
               >
-                <Link to="/v3/inspection-form">Request Inspection</Link>
+                <Link to="/inspection-form">Request Inspection</Link>
               </Button>
             </div>
           </div>
