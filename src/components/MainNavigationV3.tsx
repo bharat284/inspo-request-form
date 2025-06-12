@@ -50,8 +50,8 @@ export const MainNavigationV3 = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled 
-          ? "bg-cia-lightgray/95 backdrop-blur-md shadow-lg border-b border-cia-brightpurple/20" 
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-cia-brightpurple/20" 
+          : "bg-white/90 backdrop-blur-sm"
       )}
     >
       <div className="container mx-auto px-4 flex justify-between items-center py-4">
@@ -64,7 +64,7 @@ export const MainNavigationV3 = () => {
                 className="h-8 w-8 object-contain"
               />
             </div>
-            <span className="text-xl font-bold text-white">CIA</span>
+            <span className="text-xl font-bold text-cia-brightpurple">CIA</span>
           </Link>
         </div>
         
@@ -75,8 +75,8 @@ export const MainNavigationV3 = () => {
               <Link to="/v3">
                 <NavigationMenuLink 
                   className={cn(
-                    "px-4 py-2 rounded-md text-white hover:text-cia-brightpurple transition-colors",
-                    isActive("/v3") && "text-cia-brightpurple bg-cia-brightpurple/10"
+                    "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
+                    isActive("/v3") && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   Home
@@ -85,38 +85,24 @@ export const MainNavigationV3 = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="text-white hover:text-cia-brightpurple">
-                Services
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-cia-lightgray border border-cia-brightpurple/20">
-                  {[
-                    { title: "Fabric Inspection", path: `${basePath}/services/fabric-inspection` },
-                    { title: "First Batch Inspection", path: `${basePath}/services/first-batch-inspection` },
-                    { title: "Garment In-Line Inspection", path: `${basePath}/services/garment-inline-inspection` },
-                    { title: "Garment Final Inspection", path: `${basePath}/services/garment-final-inspection` },
-                    { title: "Container Loading", path: `${basePath}/services/container-loading` },
-                  ].map((service) => (
-                    <li key={service.title} className="row-span-1">
-                      <Link to={service.path}>
-                        <NavigationMenuLink
-                          className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-cia-brightpurple/10 text-white hover:text-cia-brightpurple"
-                        >
-                          <div className="text-sm font-medium leading-none">{service.title}</div>
-                        </NavigationMenuLink>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
+              <Link to={`${basePath}/services`}>
+                <NavigationMenuLink 
+                  className={cn(
+                    "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
+                    isActive(`${basePath}/services`) && "text-cia-accent bg-cia-brightpurple/10"
+                  )}
+                >
+                  Our Services
+                </NavigationMenuLink>
+              </Link>
             </NavigationMenuItem>
             
             <NavigationMenuItem>
               <Link to={`${basePath}/about`}>
                 <NavigationMenuLink 
                   className={cn(
-                    "px-4 py-2 rounded-md text-white hover:text-cia-brightpurple transition-colors",
-                    isActive(`${basePath}/about`) && "text-cia-brightpurple bg-cia-brightpurple/10"
+                    "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
+                    isActive(`${basePath}/about`) && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   About
@@ -128,8 +114,8 @@ export const MainNavigationV3 = () => {
               <Link to={`${basePath}/contact`}>
                 <NavigationMenuLink 
                   className={cn(
-                    "px-4 py-2 rounded-md text-white hover:text-cia-brightpurple transition-colors",
-                    isActive(`${basePath}/contact`) && "text-cia-brightpurple bg-cia-brightpurple/10"
+                    "px-4 py-2 rounded-md text-cia-brightpurple hover:text-cia-accent transition-colors",
+                    isActive(`${basePath}/contact`) && "text-cia-accent bg-cia-brightpurple/10"
                   )}
                 >
                   Contact
@@ -142,7 +128,7 @@ export const MainNavigationV3 = () => {
         {/* Mobile menu button */}
         <button 
           onClick={toggleMenu}
-          className="md:hidden text-white hover:text-cia-brightpurple transition-colors"
+          className="md:hidden text-cia-brightpurple hover:text-cia-accent transition-colors"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -159,32 +145,32 @@ export const MainNavigationV3 = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-cia-lightgray/95 backdrop-blur-md border-t border-cia-brightpurple/20">
+        <div className="md:hidden fixed inset-0 top-16 bg-white/95 backdrop-blur-md border-t border-cia-brightpurple/20">
           <nav className="flex flex-col p-6 space-y-4">
             <Link 
               to="/v3" 
-              className="text-white hover:text-cia-brightpurple py-2 transition-colors"
+              className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
               Home
             </Link>
             <Link 
               to={`${basePath}/services`} 
-              className="text-white hover:text-cia-brightpurple py-2 transition-colors"
+              className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
-              Services
+              Our Services
             </Link>
             <Link 
               to={`${basePath}/about`} 
-              className="text-white hover:text-cia-brightpurple py-2 transition-colors"
+              className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
               About
             </Link>
             <Link 
               to={`${basePath}/contact`} 
-              className="text-white hover:text-cia-brightpurple py-2 transition-colors"
+              className="text-cia-brightpurple hover:text-cia-accent py-2 transition-colors"
               onClick={toggleMenu}
             >
               Contact
