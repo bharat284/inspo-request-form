@@ -51,8 +51,8 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Form specific colors updated for new brand */
-    --form-highlight: 280 100% 36%;
+    /* Form specific colors updated for reversed brand */
+    --form-highlight: 280 100% 22%;
     --form-border: 280 100% 46%;
   }
 
@@ -93,8 +93,8 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Form specific colors updated for new brand */
-    --form-highlight: 280 100% 36%;
+    /* Form specific colors updated for reversed brand */
+    --form-highlight: 280 100% 22%;
     --form-border: 280 100% 46%;
   }
 }
@@ -109,35 +109,35 @@
   }
 }
 
-/* Inspection form specific styles - Updated for new brand colors */
+/* Inspection form specific styles - Updated for reversed brand colors */
 .inspection-form {
   @apply w-full max-w-7xl mx-auto;
 }
 
 .highlight-bg {
-  @apply bg-cia-brightpurple/20 backdrop-blur-sm;
+  @apply bg-cia-accent/20 backdrop-blur-sm;
 }
 
 .form-table {
-  @apply w-full border-collapse border-2 border-cia-brightpurple/40;
+  @apply w-full border-collapse border-2 border-cia-accent/40;
 }
 
 .form-table th, .form-table td {
-  @apply border border-cia-brightpurple/30 p-1 text-sm;
+  @apply border border-cia-accent/30 p-1 text-sm;
 }
 
 .form-table th {
-  @apply font-semibold bg-cia-brightpurple/20 text-white;
+  @apply font-semibold bg-cia-accent/20 text-white;
 }
 
 .form-table input {
-  @apply bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 border-cia-brightpurple/30;
+  @apply bg-white/10 backdrop-blur-sm text-white placeholder-gray-300 border-cia-accent/30;
 }
 
 .inspection-checkbox {
-  @apply mr-2 h-4 w-4 accent-cia-brightpurple;
+  @apply mr-2 h-4 w-4 accent-cia-accent;
 }
 
 .small-checkbox {
-  @apply w-4 h-4 border border-cia-brightpurple/40 rounded accent-cia-brightpurple;
+  @apply w-4 h-4 border border-cia-accent/40 rounded accent-cia-accent;
 }

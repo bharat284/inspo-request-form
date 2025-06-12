@@ -72,13 +72,13 @@ export default {
 					gray: "#403E43",
 					text: "#222222",
 				},
-				// Updated V3 color palette with new brand colors
+				// Reversed V3 color palette - swapping dark and bright purples
 				cia: {
 					white: "#fcfcfc",
-					lightgray: "#210035",
-					purple: "#4b0076",
-					brightpurple: "#7500b7",
-					accent: "#a000f9",
+					lightgray: "#a000f9", // was accent, now background
+					purple: "#7500b7", // was brightpurple, now middle
+					brightpurple: "#4b0076", // was purple, now darker
+					accent: "#210035", // was lightgray, now darkest
 					gray: "#6B7280",
 					lightgray: "#F3F4F6",
 				},

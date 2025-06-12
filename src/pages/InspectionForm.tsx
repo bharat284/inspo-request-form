@@ -37,8 +37,8 @@ const InspectionFormPage = () => {
           <h2 className="text-3xl font-bold mb-8 text-center text-white">Inspection Request Form</h2>
           
           {formSubmitted ? (
-            <div className="max-w-2xl mx-auto text-center bg-white/10 backdrop-blur-md p-8 rounded-lg border border-cia-brightpurple/20">
-              <svg className="w-16 h-16 text-cia-brightpurple mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="max-w-2xl mx-auto text-center bg-white/10 backdrop-blur-md p-8 rounded-lg border border-cia-accent/20">
+              <svg className="w-16 h-16 text-cia-accent mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
               <h3 className="text-2xl font-bold text-white mb-2">Thank You!</h3>
@@ -47,7 +47,7 @@ const InspectionFormPage = () => {
               </p>
               <button 
                 onClick={() => setFormSubmitted(false)}
-                className="px-4 py-2 bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white rounded-md hover:from-cia-accent hover:to-cia-brightpurple transition-all duration-300"
+                className="px-4 py-2 bg-gradient-to-r from-cia-accent to-cia-brightpurple text-white rounded-md hover:from-cia-brightpurple hover:to-cia-accent transition-all duration-300"
               >
                 Submit Another Request
               </button>
@@ -58,11 +58,11 @@ const InspectionFormPage = () => {
                 Please fill out the form below to request an inspection. Fields marked with * are required.
               </p>
               
-              <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-cia-brightpurple/20">
+              <div className="bg-white/10 backdrop-blur-md p-6 rounded-lg border border-cia-accent/20">
                 <InspectionForm />
               </div>
               
-              <div className="mt-8 p-4 bg-cia-brightpurple/10 backdrop-blur-md rounded-md border border-cia-brightpurple/20">
+              <div className="mt-8 p-4 bg-cia-accent/10 backdrop-blur-md rounded-md border border-cia-accent/20">
                 <h3 className="font-semibold text-white mb-2">Note:</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-1">
                   <li>Inspection requests should be submitted at least 4 working days prior to the desired inspection date.</li>
