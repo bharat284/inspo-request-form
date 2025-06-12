@@ -50,7 +50,7 @@ export const MainNavigationV3 = () => {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300",
         scrolled 
-          ? "bg-cia-darkpurple/95 backdrop-blur-md shadow-lg border-b border-cia-brightpurple/20" 
+          ? "bg-cia-lightgray/95 backdrop-blur-md shadow-lg border-b border-cia-brightpurple/20" 
           : "bg-transparent"
       )}
     >
@@ -59,9 +59,9 @@ export const MainNavigationV3 = () => {
           <Link to="/v3" className="flex items-center space-x-3">
             <div className="w-12 h-12 bg-gradient-to-br from-cia-brightpurple to-cia-accent rounded-lg flex items-center justify-center">
               <img 
-                src="/lovable-uploads/f34f2f5d-1ff9-4b22-96f5-c3ee4cfd6ba2.png" 
+                src="/lovable-uploads/7f13fd27-c4b7-4d3d-b49d-c7c3bede087e.png" 
                 alt="CIA Logo" 
-                className="h-8 w-8 object-contain brightness-0 invert"
+                className="h-8 w-8 object-contain"
               />
             </div>
             <span className="text-xl font-bold text-white">CIA</span>
@@ -89,7 +89,7 @@ export const MainNavigationV3 = () => {
                 Services
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-cia-darkpurple border border-cia-brightpurple/20">
+                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-cia-lightgray border border-cia-brightpurple/20">
                   {[
                     { title: "Fabric Inspection", path: `${basePath}/services/fabric-inspection` },
                     { title: "First Batch Inspection", path: `${basePath}/services/first-batch-inspection` },
@@ -159,7 +159,7 @@ export const MainNavigationV3 = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-cia-darkpurple/95 backdrop-blur-md border-t border-cia-brightpurple/20">
+        <div className="md:hidden fixed inset-0 top-16 bg-cia-lightgray/95 backdrop-blur-md border-t border-cia-brightpurple/20">
           <nav className="flex flex-col p-6 space-y-4">
             <Link 
               to="/v3" 

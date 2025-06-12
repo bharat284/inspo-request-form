@@ -29,7 +29,7 @@ const InspectionFormPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-cia-darkpurple via-cia-navy to-cia-purple">
+    <div className="min-h-screen bg-gradient-to-br from-cia-lightgray via-cia-purple to-cia-brightpurple">
       <MainNavigationV3 />
 
       <main className="pt-28 pb-20">

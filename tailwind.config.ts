@@ -72,14 +72,13 @@ export default {
 					gray: "#403E43",
 					text: "#222222",
 				},
-				// Adding the new V3 color palette
+				// Updated V3 color palette with new brand colors
 				cia: {
-					darkpurple: "#2A1B3D",
-					navy: "#44224B",
-					purple: "#7B4397",
-					brightpurple: "#DC39FC",
-					lightpurple: "#B565A7",
-					accent: "#E056FD",
+					white: "#fcfcfc",
+					lightgray: "#210035",
+					purple: "#4b0076",
+					brightpurple: "#7500b7",
+					accent: "#a000f9",
 					gray: "#6B7280",
 					lightgray: "#F3F4F6",
 				},

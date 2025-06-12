@@ -51,9 +51,9 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Form specific colors */
-    --form-highlight: 206 72% 68%;
-    --form-border: 207 75% 43%;
+    /* Form specific colors updated for new brand */
+    --form-highlight: 280 100% 36%;
+    --form-border: 280 100% 46%;
   }
 
   .dark {
@@ -93,9 +93,9 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     
-    /* Form specific colors */
-    --form-highlight: 206 72% 68%;
-    --form-border: 207 75% 43%;
+    /* Form specific colors updated for new brand */
+    --form-highlight: 280 100% 36%;
+    --form-border: 280 100% 46%;
   }
 }
 
@@ -109,7 +109,7 @@
   }
 }
 
-/* Inspection form specific styles - Updated for V3 */
+/* Inspection form specific styles - Updated for new brand colors */
 .inspection-form {
   @apply w-full max-w-7xl mx-auto;
 }

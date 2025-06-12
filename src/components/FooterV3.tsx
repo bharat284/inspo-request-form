@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 export const FooterV3 = () => {
   return (
-    <footer className="relative bg-cia-darkpurple border-t border-cia-brightpurple/20">
+    <footer className="relative bg-cia-lightgray border-t border-cia-brightpurple/20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
               <div className="w-10 h-10 bg-gradient-to-br from-cia-brightpurple to-cia-accent rounded-lg flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/f34f2f5d-1ff9-4b22-96f5-c3ee4cfd6ba2.png" 
+                  src="/lovable-uploads/7f13fd27-c4b7-4d3d-b49d-c7c3bede087e.png" 
                   alt="CIA Logo" 
-                  className="h-6 w-6 object-contain brightness-0 invert"
+                  className="h-6 w-6 object-contain"
                 />
               </div>
               <span className="text-lg font-bold text-white">CIA</span>
