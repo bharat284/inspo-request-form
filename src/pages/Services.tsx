@@ -6,7 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Services = () => {
   const location = useLocation();
-  const basePath = location.pathname.startsWith("/v1") ? "/v1" : "";
+  const basePath = location.pathname.startsWith("/v1") ? "/v1" : location.pathname.startsWith("/v3") ? "/v3" : "";
   
   const services = [
     {
@@ -75,33 +75,71 @@ const Services = () => {
     }
   ];
 
+  // Use different navigation based on version
+  const NavigationComponent = basePath === "/v3" ? 
+    require("@/components/MainNavigationV3").MainNavigationV3 : 
+    MainNavigation;
+    
+  const FooterComponent = basePath === "/v3" ? 
+    require("@/components/FooterV3").FooterV3 : 
+    Footer;
+
   return (
     <div className="min-h-screen bg-white">
-      <MainNavigation />
+      <NavigationComponent />
 
       <main className="pt-28 pb-20">
         <section className="py-10">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-8 text-aileron-darkblue text-center">Our Services</h1>
-            
-            <div className="max-w-4xl mx-auto">
-              <p className="text-center text-gray-600 mb-12">
+            <div className="text-center mb-16">
+              <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${
+                basePath === "/v3" 
+                  ? "bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent" 
+                  : "text-aileron-darkblue"
+              }`}>
+                Our Services
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Colombus Inspection Agency offers a comprehensive range of quality inspection services 
                 tailored to the textile and apparel industries. Our experienced team ensures your products 
                 meet all required standards and specifications.
               </p>
-              
+            </div>
+            
+            <div className="max-w-4xl mx-auto">
               <div className="grid gap-12 mb-12">
                 {services.map((service, index) => (
-                  <div key={index} className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                    <h2 className="text-2xl font-semibold mb-4 text-aileron-blue">{service.title}</h2>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                    <ul className="list-disc pl-6 mb-6 text-gray-600 space-y-2">
+                  <div key={index} className={
+                    basePath === "/v3" 
+                      ? "bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-8 border border-cia-brightpurple/20 text-white hover:transform hover:scale-105 transition-all duration-300"
+                      : "bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
+                  }>
+                    <h2 className={`text-2xl font-semibold mb-4 ${
+                      basePath === "/v3" ? "text-white" : "text-aileron-blue"
+                    }`}>
+                      {service.title}
+                    </h2>
+                    <p className={`mb-4 ${
+                      basePath === "/v3" ? "text-gray-100" : "text-gray-600"
+                    }`}>
+                      {service.description}
+                    </p>
+                    <ul className={`list-disc pl-6 mb-6 space-y-2 ${
+                      basePath === "/v3" ? "text-gray-100" : "text-gray-600"
+                    }`}>
                       {service.features.map((feature, idx) => (
                         <li key={idx}>{feature}</li>
                       ))}
                     </ul>
-                    <Button variant="outline" className="text-aileron-blue border-aileron-blue hover:bg-aileron-blue/10" asChild>
+                    <Button 
+                      variant="outline" 
+                      className={
+                        basePath === "/v3"
+                          ? "border-white text-white hover:bg-white hover:text-cia-brightpurple"
+                          : "text-aileron-blue border-aileron-blue hover:bg-aileron-blue/10"
+                      }
+                      asChild
+                    >
                       <Link to={service.path}>Learn More</Link>
                     </Button>
                   </div>
@@ -109,11 +147,24 @@ const Services = () => {
               </div>
               
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4 text-aileron-darkblue">Need a Customized Inspection Solution?</h3>
+                <h3 className={`text-xl font-semibold mb-4 ${
+                  basePath === "/v3" 
+                    ? "bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent"
+                    : "text-aileron-darkblue"
+                }`}>
+                  Need a Customized Inspection Solution?
+                </h3>
                 <p className="text-gray-600 mb-6">
                   We understand that each client has unique requirements. Contact us to discuss how we can tailor our services to meet your specific needs.
                 </p>
-                <Button className="bg-aileron-blue hover:bg-aileron-mediumblue text-white" asChild>
+                <Button 
+                  className={
+                    basePath === "/v3"
+                      ? "bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"
+                      : "bg-aileron-blue hover:bg-aileron-mediumblue text-white"
+                  }
+                  asChild
+                >
                   <Link to={`${basePath}/contact`}>Contact Us</Link>
                 </Button>
               </div>
@@ -122,7 +173,7 @@ const Services = () => {
         </section>
       </main>
 
-      <Footer />
+      <FooterComponent />
     </div>
   );
 };
