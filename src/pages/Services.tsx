@@ -1,15 +1,10 @@
 
-import { MainNavigation } from "@/components/MainNavigation";
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
-import { Footer } from "@/components/Footer";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Services = () => {
-  const location = useLocation();
-  const basePath = location.pathname.startsWith("/v1") ? "/v1" : location.pathname.startsWith("/v3") ? "/v3" : "";
-  
   const services = [
     {
       title: "Fabric Inspection",
@@ -22,7 +17,7 @@ const Services = () => {
         "Weight and density variations",
         "Finish quality problems"
       ],
-      path: `${basePath}/services/fabric-inspection`
+      path: "/services/fabric-inspection"
     },
     {
       title: "First Batch Inspection",
@@ -35,7 +30,7 @@ const Services = () => {
         "Functionality testing",
         "Packaging evaluation"
       ],
-      path: `${basePath}/services/first-batch-inspection`
+      path: "/services/first-batch-inspection"
     },
     {
       title: "Garment In-Line Inspection",
@@ -47,7 +42,7 @@ const Services = () => {
         "Quick corrective action implementation",
         "Production line efficiency assessment"
       ],
-      path: `${basePath}/services/garment-inline-inspection`
+      path: "/services/garment-inline-inspection"
     },
     {
       title: "Garment Final Inspection",
@@ -60,7 +55,7 @@ const Services = () => {
         "Packaging and labeling verification",
         "Product safety and compliance checks"
       ],
-      path: `${basePath}/services/garment-final-inspection`
+      path: "/services/garment-final-inspection"
     },
     {
       title: "Container Loading",
@@ -73,27 +68,19 @@ const Services = () => {
         "Container condition inspection",
         "Documentation verification"
       ],
-      path: `${basePath}/services/container-loading`
+      path: "/services/container-loading"
     }
   ];
 
-  // Use different navigation based on version
-  const NavigationComponent = basePath === "/v3" ? MainNavigationV3 : MainNavigation;
-  const FooterComponent = basePath === "/v3" ? FooterV3 : Footer;
-
   return (
     <div className="min-h-screen bg-white">
-      <NavigationComponent />
+      <MainNavigationV3 />
 
       <main className="pt-28 pb-20">
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${
-                basePath === "/v3" 
-                  ? "bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent" 
-                  : "text-aileron-darkblue"
-              }`}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
                 Our Services
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -106,35 +93,20 @@ const Services = () => {
             <div className="max-w-4xl mx-auto">
               <div className="grid gap-12 mb-12">
                 {services.map((service, index) => (
-                  <div key={index} className={
-                    basePath === "/v3" 
-                      ? "bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-8 border border-cia-brightpurple/20 text-white hover:transform hover:scale-105 transition-all duration-300"
-                      : "bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
-                  }>
-                    <h2 className={`text-2xl font-semibold mb-4 ${
-                      basePath === "/v3" ? "text-white" : "text-aileron-blue"
-                    }`}>
+                  <div key={index} className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-8 border border-cia-brightpurple/20 text-white hover:transform hover:scale-105 transition-all duration-300">
+                    <h2 className="text-2xl font-semibold mb-4 text-white">
                       {service.title}
                     </h2>
-                    <p className={`mb-4 ${
-                      basePath === "/v3" ? "text-gray-100" : "text-gray-600"
-                    }`}>
+                    <p className="mb-4 text-gray-100">
                       {service.description}
                     </p>
-                    <ul className={`list-disc pl-6 mb-6 space-y-2 ${
-                      basePath === "/v3" ? "text-gray-100" : "text-gray-600"
-                    }`}>
+                    <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-100">
                       {service.features.map((feature, idx) => (
                         <li key={idx}>{feature}</li>
                       ))}
                     </ul>
                     <Button 
-                      variant="outline" 
-                      className={
-                        basePath === "/v3"
-                          ? "border-white text-white hover:bg-white hover:text-cia-brightpurple"
-                          : "text-aileron-blue border-aileron-blue hover:bg-aileron-blue/10"
-                      }
+                      className="bg-white text-cia-brightpurple hover:bg-gray-100"
                       asChild
                     >
                       <Link to={service.path}>Learn More</Link>
@@ -144,25 +116,17 @@ const Services = () => {
               </div>
               
               <div className="text-center">
-                <h3 className={`text-xl font-semibold mb-4 ${
-                  basePath === "/v3" 
-                    ? "bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent"
-                    : "text-aileron-darkblue"
-                }`}>
+                <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
                   Need a Customized Inspection Solution?
                 </h3>
                 <p className="text-gray-600 mb-6">
                   We understand that each client has unique requirements. Contact us to discuss how we can tailor our services to meet your specific needs.
                 </p>
                 <Button 
-                  className={
-                    basePath === "/v3"
-                      ? "bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"
-                      : "bg-aileron-blue hover:bg-aileron-mediumblue text-white"
-                  }
+                  className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"
                   asChild
                 >
-                  <Link to={`${basePath}/contact`}>Contact Us</Link>
+                  <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
@@ -170,7 +134,7 @@ const Services = () => {
         </section>
       </main>
 
-      <FooterComponent />
+      <FooterV3 />
     </div>
   );
 };
