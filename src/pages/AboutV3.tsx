@@ -6,7 +6,7 @@ import { Award, Users, Target } from "lucide-react";
 
 const AboutV3 = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-cia-lightgray">
       <MainNavigationV3 />
 
       <main className="pt-28 pb-20">
@@ -22,11 +22,11 @@ const AboutV3 = () => {
                   className="h-24 mx-auto mb-8"
                 />
                 
-                <p className="text-gray-600 mb-6">
+                <p className="text-white mb-6">
                   Colombus Inspection Agency (CIA) is a leading quality control and inspection service provider specializing in textile, apparel, and consumer goods. With years of experience in the industry, we ensure that your products meet international quality standards and specifications.
                 </p>
                 
-                <p className="text-gray-600 mb-6">
+                <p className="text-white mb-6">
                   Founded with a vision to enhance product quality and customer satisfaction, Colombus Inspection Agency has grown to become a trusted partner for manufacturers and retailers worldwide. Our team of professional inspectors is equipped with the knowledge and tools to provide accurate and reliable inspection services across the manufacturing process - from raw materials to finished products.
                 </p>
               </div>
@@ -34,14 +34,14 @@ const AboutV3 = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
                 <div>
                   <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">Our Mission</h2>
-                  <p className="text-gray-600">
+                  <p className="text-white">
                     To provide exceptional quality inspection services that help our clients deliver products that exceed customer expectations, while maintaining the highest standards of integrity, accuracy, and professionalism.
                   </p>
                 </div>
                 
                 <div>
                   <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">Our Vision</h2>
-                  <p className="text-gray-600">
+                  <p className="text-white">
                     To be the most trusted and reliable quality inspection partner in the industry, recognized for our expertise, innovation, and commitment to excellence.
                   </p>
                 </div>
@@ -49,7 +49,7 @@ const AboutV3 = () => {
               
               <div className="mb-12">
                 <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">Our Team</h2>
-                <p className="text-gray-600 mb-6">
+                <p className="text-white mb-6">
                   Our team consists of highly skilled and experienced professionals with deep knowledge of manufacturing processes, quality standards, and industry requirements. Each inspector undergoes rigorous training and regular skill updates to ensure they stay at the forefront of quality inspection practices.
                 </p>
                 
@@ -59,7 +59,7 @@ const AboutV3 = () => {
                       <img src="/lovable-uploads/a26b9068-59f9-45cd-bcc6-1a81126339d2.png" alt="Pranab Das" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold text-cia-brightpurple">Pranab Das</h3>
-                    <p className="text-gray-600">Founder & Chief Inspector</p>
+                    <p className="text-white">Founder & Chief Inspector</p>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const AboutV3 = () => {
               
               <div>
                 <h2 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">Why Choose Us?</h2>
-                <ul className="space-y-4 list-disc pl-5 text-gray-600">
+                <ul className="space-y-4 list-disc pl-5 text-white">
                   <li>Experienced team of professional inspectors</li>
                   <li>Comprehensive inspection services across the supply chain</li>
                   <li>Detailed and accurate reporting</li>
