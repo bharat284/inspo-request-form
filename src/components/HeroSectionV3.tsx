@@ -33,8 +33,7 @@ export const HeroSectionV3 = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline" 
-              className="border-cia-brightpurple text-cia-brightpurple hover:bg-cia-brightpurple hover:text-white px-8 py-4 text-lg"
+              className="bg-white text-cia-brightpurple hover:bg-gray-100 border border-cia-brightpurple px-8 py-4 text-lg"
               asChild
             >
               <Link to="/v3/services">

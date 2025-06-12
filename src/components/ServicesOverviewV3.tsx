@@ -58,8 +58,7 @@ export const ServicesOverviewV3 = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-100 mb-6">{service.description}</p>
                 <Button 
-                  variant="outline" 
-                  className="border-white text-white hover:bg-white hover:text-cia-brightpurple"
+                  className="bg-white text-cia-brightpurple hover:bg-gray-100"
                   asChild
                 >
                   <Link to={service.path}>Learn More</Link>

@@ -70,8 +70,7 @@ export const ContactSectionV3 = () => {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
-                className="border-cia-brightpurple text-cia-brightpurple hover:bg-cia-brightpurple hover:text-white"
+                className="bg-white text-cia-brightpurple hover:bg-gray-100 border border-cia-brightpurple"
                 asChild
               >
                 <Link to="/v3/inspection-form">Request Inspection</Link>
