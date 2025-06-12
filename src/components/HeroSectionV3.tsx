@@ -5,20 +5,17 @@ import { ArrowRight, CheckCircle, Shield, Clock } from "lucide-react";
 
 export const HeroSectionV3 = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cia-darkpurple/90 via-cia-navy/80 to-cia-purple/70"></div>
-      
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cia-brightpurple to-cia-accent bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cia-purple via-cia-brightpurple to-cia-accent bg-clip-text text-transparent">
               Quality Inspection
               <br />
               <span className="text-cia-brightpurple">Excellence</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
               Your trusted partner in textile and apparel quality control. 
               Ensuring excellence from fabric to finished goods.
             </p>
@@ -48,20 +45,20 @@ export const HeroSectionV3 = () => {
 
           {/* Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-cia-brightpurple/20">
-              <CheckCircle className="h-12 w-12 text-cia-brightpurple mx-auto mb-4" />
+            <div className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white">
+              <CheckCircle className="h-12 w-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Certified Quality</h3>
-              <p className="text-gray-300">International standards compliance with detailed reporting</p>
+              <p className="text-gray-100">International standards compliance with detailed reporting</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-cia-brightpurple/20">
-              <Clock className="h-12 w-12 text-cia-brightpurple mx-auto mb-4" />
+            <div className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white">
+              <Clock className="h-12 w-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Fast Turnaround</h3>
-              <p className="text-gray-300">Quick inspection services without compromising quality</p>
+              <p className="text-gray-100">Quick inspection services without compromising quality</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-cia-brightpurple/20">
-              <Shield className="h-12 w-12 text-cia-brightpurple mx-auto mb-4" />
+            <div className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white">
+              <Shield className="h-12 w-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Trusted Expertise</h3>
-              <p className="text-gray-300">Years of experience in textile and apparel inspection</p>
+              <p className="text-gray-100">Years of experience in textile and apparel inspection</p>
             </div>
           </div>
         </div>
