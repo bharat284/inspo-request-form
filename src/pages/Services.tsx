@@ -1,6 +1,8 @@
 
 import { MainNavigation } from "@/components/MainNavigation";
+import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { Footer } from "@/components/Footer";
+import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -76,13 +78,8 @@ const Services = () => {
   ];
 
   // Use different navigation based on version
-  const NavigationComponent = basePath === "/v3" ? 
-    require("@/components/MainNavigationV3").MainNavigationV3 : 
-    MainNavigation;
-    
-  const FooterComponent = basePath === "/v3" ? 
-    require("@/components/FooterV3").FooterV3 : 
-    Footer;
+  const NavigationComponent = basePath === "/v3" ? MainNavigationV3 : MainNavigation;
+  const FooterComponent = basePath === "/v3" ? FooterV3 : Footer;
 
   return (
     <div className="min-h-screen bg-white">
