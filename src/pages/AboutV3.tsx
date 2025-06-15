@@ -1,4 +1,3 @@
-
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
@@ -12,12 +11,12 @@ const AboutV3 = () => {
       <main className="pt-28 pb-20">
         <section className="py-10">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-8 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent text-center">About Colombus Inspection Agency</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent text-center leading-tight">About Colombus Inspection Agency</h1>
             
             <div className="max-w-4xl mx-auto">
               <div className="mb-12">
                 <img 
-                  src="/lovable-uploads/518bcfa0-fc1f-40e5-b963-86efb8897d05.png" 
+                  src="/lovable-uploads/7f13fd27-c4b7-4d3d-b49d-c7c3bede087e.png" 
                   alt="Colombus Inspection Agency Logo" 
                   className="h-24 mx-auto mb-8"
                 />
@@ -59,7 +58,7 @@ const AboutV3 = () => {
                       <img src="/lovable-uploads/eea219e9-195d-4045-97e4-0bcded71cbf0.png" alt="Pranab Das" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold text-cia-brightpurple">Pranab Das</h3>
-                    <p className="text-gray-800">Founder & Chief Inspector</p>
+                    <p className="text-gray-800">Senior Inspector</p>
                   </div>
                   
                   <div className="text-center">
