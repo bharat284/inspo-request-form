@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { MainNavigation } from "@/components/MainNavigation";
 import { TestimonialCard } from "@/components/TestimonialCard";
@@ -70,19 +69,17 @@ const Home = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="mb-4 relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-aileron-blue">
-                  <img src="/lovable-uploads/a26b9068-59f9-45cd-bcc6-1a81126339d2.png" alt="Pranab Das" className="w-full h-full object-cover" />
+                  <img src="/lovable-uploads/eea219e9-195d-4045-97e4-0bcded71cbf0.png" alt="Pranab Das" className="w-full h-full object-cover" />
                 </div>
                 <h3 className="text-xl font-semibold text-aileron-darkblue">Pranab Das</h3>
                 <p className="text-gray-600">Quality Inspection Specialist</p>
               </div>
               <div className="text-center">
-                <div className="mb-4 relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-aileron-blue bg-gray-100 flex items-center justify-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
+                <div className="mb-4 relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-aileron-blue">
+                  <img src="/lovable-uploads/43d669df-acc1-46ce-88a5-52ec462ad81b.png" alt="Sonia Chauhan" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="text-xl font-semibold text-aileron-darkblue">Rajeev Kumar</h3>
-                <p className="text-gray-600">Garment Inspection Expert</p>
+                <h3 className="text-xl font-semibold text-aileron-darkblue">Sonia Chauhan</h3>
+                <p className="text-gray-600">Senior Inspector</p>
               </div>
               <div className="text-center">
                 <div className="mb-4 relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-aileron-blue bg-gray-100 flex items-center justify-center">

@@ -1,3 +1,4 @@
+
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
@@ -55,7 +56,7 @@ const AboutV3 = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                   <div className="text-center">
                     <div className="mb-4 relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-cia-brightpurple">
-                      <img src="/lovable-uploads/a26b9068-59f9-45cd-bcc6-1a81126339d2.png" alt="Pranab Das" className="w-full h-full object-cover" />
+                      <img src="/lovable-uploads/eea219e9-195d-4045-97e4-0bcded71cbf0.png" alt="Pranab Das" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold text-cia-brightpurple">Pranab Das</h3>
                     <p className="text-gray-800">Founder & Chief Inspector</p>
@@ -63,7 +64,7 @@ const AboutV3 = () => {
                   
                   <div className="text-center">
                     <div className="mb-4 relative mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-cia-brightpurple">
-                      <img src="/lovable-uploads/f34f2f5d-1ff9-4b22-96f5-c3ee4cfd6ba2.png" alt="Sonia Chauhan" className="w-full h-full object-cover" />
+                      <img src="/lovable-uploads/43d669df-acc1-46ce-88a5-52ec462ad81b.png" alt="Sonia Chauhan" className="w-full h-full object-cover" />
                     </div>
                     <h3 className="text-xl font-semibold text-cia-brightpurple">Sonia Chauhan</h3>
                     <p className="text-gray-800">Senior Inspector</p>
