@@ -1,8 +1,8 @@
-
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { Award, Users, Calendar, Settings, Shield, Zap } from "lucide-react";
 
 const Services = () => {
   const services = [
@@ -73,6 +73,18 @@ const Services = () => {
     }
   ];
 
+  const credentials = [
+    { icon: Award, label: "ISO-9001 Accredited", value: "Certified Quality" },
+    { icon: Calendar, label: "Business Experience", value: "12+ Years" },
+    { icon: Users, label: "Clients Served", value: "15+" }
+  ];
+
+  const advantages = [
+    { icon: Settings, title: "Customized Service", description: "Tailored solutions for your specific needs" },
+    { icon: Shield, title: "Accountability & Scalability", description: "Reliable and adaptable services" },
+    { icon: Zap, title: "Latest Technology", description: "Cutting-edge inspection methods" }
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <MainNavigationV3 />
@@ -84,6 +96,22 @@ const Services = () => {
               <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
                 Our Services
               </h1>
+              
+              {/* Credentials Section */}
+              <div className="flex justify-center mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl">
+                  {credentials.map((credential, index) => (
+                    <div key={index} className="flex items-center space-x-3 bg-gradient-to-r from-cia-purple/10 to-cia-brightpurple/10 rounded-lg p-4">
+                      <credential.icon className="h-6 w-6 text-cia-brightpurple" />
+                      <div className="text-left">
+                        <div className="text-sm text-gray-600">{credential.label}</div>
+                        <div className="font-semibold text-cia-brightpurple">{credential.value}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
               <div className="max-w-4xl mx-auto mb-8">
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
                   CIA provides inspection services for manufacturers, retailers, traders, and international buyers across diverse industries including textiles, apparels, furniture, home decors, cookware, leather goods, footwear, sports products, luggage, fashion accessories, electrical and electronics, hardgoods, stationery, and toys. Our independent pre-shipment inspections identify potential defects and inconsistencies, safeguarding against costly import risks and product recalls. We conduct on-site inspections before, during, and after production, with compliance experts verifying specifications against factory output according to ISO standards. Our experienced inspectors ensure products meet all regulatory, voluntary, and client-specific requirements across all these industries.
@@ -117,9 +145,21 @@ const Services = () => {
               </div>
               
               <div className="text-center">
-                <h3 className="text-xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
-                  Need a Customized Inspection Solution?
+                <h3 className="text-xl font-semibold mb-6 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
+                  Why Choose CIA?
                 </h3>
+                
+                {/* Advantages Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                  {advantages.map((advantage, index) => (
+                    <div key={index} className="bg-white border border-cia-brightpurple/20 rounded-lg p-6 hover:shadow-lg transition-shadow">
+                      <advantage.icon className="h-8 w-8 text-cia-brightpurple mx-auto mb-3" />
+                      <h4 className="font-semibold text-cia-brightpurple mb-2">{advantage.title}</h4>
+                      <p className="text-gray-600 text-sm">{advantage.description}</p>
+                    </div>
+                  ))}
+                </div>
+
                 <p className="text-gray-600 mb-6">
                   We understand that each client has unique requirements. Contact us to discuss how we can tailor our services to meet your specific needs.
                 </p>
