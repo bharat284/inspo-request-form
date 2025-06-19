@@ -1,4 +1,3 @@
-
 import { MapPin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -18,9 +17,32 @@ export const FooterV3 = () => {
               </div>
               <span className="text-lg font-bold text-cia-brightpurple">CIA</span>
             </div>
-            <p className="text-gray-600 text-sm">
+            <p className="text-gray-600 text-sm mb-4">
               Your trusted partner in quality inspection services.
             </p>
+            
+            {/* Certificates Section */}
+            <div>
+              <h4 className="text-sm font-medium mb-3 text-cia-brightpurple">Certifications</h4>
+              <div className="flex gap-3">
+                <div className="group cursor-pointer">
+                  <img 
+                    src="/lovable-uploads/355c844f-b856-4b5b-a775-63a754cb6a9a.png" 
+                    alt="ISO 9001:2015 Certificate" 
+                    className="h-16 w-12 object-cover rounded border border-cia-brightpurple/20 hover:shadow-md transition-shadow"
+                  />
+                  <p className="text-xs text-gray-500 mt-1 text-center">ISO 9001:2015</p>
+                </div>
+                <div className="group cursor-pointer">
+                  <img 
+                    src="/lovable-uploads/42ffeaf3-2701-48f2-8844-f453a2becec0.png" 
+                    alt="UDYAM Registration Certificate" 
+                    className="h-16 w-12 object-cover rounded border border-cia-brightpurple/20 hover:shadow-md transition-shadow"
+                  />
+                  <p className="text-xs text-gray-500 mt-1 text-center">UDYAM Reg.</p>
+                </div>
+              </div>
+            </div>
           </div>
           
           <div>
