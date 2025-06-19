@@ -7,68 +7,69 @@ import { Link } from "react-router-dom";
 const Services = () => {
   const services = [
     {
-      title: "Fabric Inspection",
-      description: "Our fabric inspection service provides a comprehensive analysis of fabric quality, weight, color, and defects to ensure materials meet specifications. Our inspectors use industry-standard techniques and equipment to detect issues such as:",
+      title: "Pre-Production Inspection (PPI)",
+      description: "A pre-production inspection is completed right before the beginning of the actual mass production and after the identification/evaluation of vendor or factory to confirm that the vendor understood the order's requirements and specifications and is well prepared for production. Also, sample will be picked and be tested in lab. To get a clear idea of the production schedule and predict any possible problems that could affect the quality of goods, the PPI will set up a preliminary production test to match the golden sample. The PPI thus permits timely corrections and improvement before the mass production is initiated; any nonconformity is immediately reported to avoid delay in shipment.",
       features: [
-        "Weaving or knitting defects",
-        "Color inconsistencies",
-        "Printing problems",
-        "Dimensional stability issues",
-        "Weight and density variations",
-        "Finish quality problems"
+        "Vendor readiness confirmation",
+        "Order requirements verification",
+        "Sample testing in laboratory",
+        "Production schedule assessment",
+        "Quality problem prediction",
+        "Golden sample matching test"
       ],
-      path: "/services/fabric-inspection"
+      path: "/services/pre-production-inspection"
     },
     {
-      title: "First Batch Inspection",
-      description: "First batch inspection is crucial to verify that initial production meets all quality standards and specifications before full-scale manufacturing begins. This early validation helps prevent costly mistakes and delays. Our first batch inspection includes:",
+      title: "Initial Production Inspection (IPI)",
+      description: "This inspection shall be performed at the initial stage of production when 20 to 50 pieces are ready and these are checked for measurement and workmanship. At this stage, we ensure that clients that the products are compliant with the approved samples and the production method are correct.",
       features: [
-        "Material quality verification",
-        "Construction and assembly evaluation",
-        "Appearance and finish assessment",
-        "Sizing and measurement checks",
-        "Functionality testing",
-        "Packaging evaluation"
+        "Early stage production verification",
+        "Measurement accuracy checks",
+        "Workmanship quality assessment",
+        "Sample compliance verification",
+        "Production method validation",
+        "Quality standard confirmation"
       ],
-      path: "/services/first-batch-inspection"
+      path: "/services/initial-production-inspection"
     },
     {
-      title: "Garment In-Line Inspection",
-      description: "Our in-line inspection service monitors the production process while garments are still on the production line. This allows for immediate correction of any issues, reducing wastage and ensuring consistent quality. Key aspects of our in-line inspection include:",
+      title: "During Production Inspection (DPI)",
+      description: "Between 30% and 50% of the manufacturing process the DPI will monitor packed and ready to go products. During the DPI, we check product appearance (AQL), workmanship quality, size measurements, weight check, functionality assortment, accessories, labelling, and logos. Our experts also check the packaging, other tests, and special requirements depending on the product and or export market. The During Production Inspection (DPI) will also cover the raw materials, unfinished products, and the planning of production.",
       features: [
-        "Real-time quality monitoring",
-        "Identification of recurring defects",
-        "Process improvement recommendations",
-        "Quick corrective action implementation",
-        "Production line efficiency assessment"
+        "Mid-production quality monitoring",
+        "AQL appearance inspection",
+        "Size and weight verification",
+        "Functionality and accessories check",
+        "Labelling and logo inspection",
+        "Raw materials assessment"
       ],
-      path: "/services/garment-inline-inspection"
+      path: "/services/during-production-inspection"
     },
     {
-      title: "Garment Final Inspection",
-      description: "Our final inspection service provides a thorough examination of finished garments for quality, construction, measurements, and appearance. We conduct comprehensive checks to ensure products meet all requirements before shipping. Our final inspection covers:",
+      title: "Final Random Inspection (FRI)",
+      description: "Final Random Inspection (FRI) is an on-site Product Inspection that ensures the conformity of production to your specifications. This ensures the conformity of your product with its specifications and quality requirement before shipment. This control takes place when 100% of the goods are produced and 80% packed (sometimes it is as per specific requirements of the client).",
       features: [
-        "Visual inspection for defects",
-        "Measurement verification against specifications",
-        "Construction quality assessment",
-        "Accessories and trim evaluation",
-        "Packaging and labeling verification",
-        "Product safety and compliance checks"
+        "Complete production conformity check",
+        "Specification compliance verification",
+        "Pre-shipment quality assurance",
+        "On-site product inspection",
+        "Quality requirement validation",
+        "Client-specific requirements check"
       ],
-      path: "/services/garment-final-inspection"
+      path: "/services/final-random-inspection"
     },
     {
-      title: "Container Loading",
-      description: "Our container loading inspection service ensures that products are properly packed, loaded, and secured for safe transportation. We verify quantity, packaging integrity, and loading conditions to prevent damage during shipping. Our container loading service includes:",
+      title: "100% Full Check Inspection",
+      description: "A designated QC team will station at factory site and ensure 100% quality check of the goods. Every piece of product will be inspected and repacked. All defective goods will be sorted out.",
       features: [
-        "Quantity verification",
-        "Packaging condition assessment",
-        "Loading arrangement evaluation",
-        "Securing and bracing verification",
-        "Container condition inspection",
-        "Documentation verification"
+        "Dedicated on-site QC team",
+        "100% product inspection coverage",
+        "Individual piece examination",
+        "Complete repacking service",
+        "Defective goods separation",
+        "Quality assurance guarantee"
       ],
-      path: "/services/container-loading"
+      path: "/services/full-check-inspection"
     }
   ];
 
@@ -121,6 +122,9 @@ const Services = () => {
                 </h3>
                 <p className="text-gray-600 mb-6">
                   We understand that each client has unique requirements. Contact us to discuss how we can tailor our services to meet your specific needs.
+                </p>
+                <p className="text-gray-600 mb-6 font-medium">
+                  All inspections are conducted by experts with in-depth knowledge of the latest inspection techniques and technology.
                 </p>
                 <Button 
                   className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"

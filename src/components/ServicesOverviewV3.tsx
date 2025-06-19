@@ -8,33 +8,33 @@ export const ServicesOverviewV3 = () => {
   const services = [
     {
       icon: Search,
-      title: "Fabric Inspection",
-      description: "Comprehensive fabric quality analysis including weight, color, and defect detection.",
-      path: "/services/fabric-inspection"
+      title: "Pre-Production Inspection",
+      description: "Comprehensive pre-production analysis to confirm vendor readiness and sample testing.",
+      path: "/services/pre-production-inspection"
     },
     {
       icon: ClipboardList,
-      title: "First Batch Inspection",
-      description: "Initial production verification to ensure quality standards before full manufacturing.",
-      path: "/services/first-batch-inspection"
+      title: "Initial Production Inspection",
+      description: "Early-stage production verification when 20-50 pieces are ready for measurement and workmanship checks.",
+      path: "/services/initial-production-inspection"
     },
     {
       icon: Package,
-      title: "Garment In-Line Inspection",
-      description: "Real-time quality monitoring during the production process.",
-      path: "/services/garment-inline-inspection"
+      title: "During Production Inspection",
+      description: "Mid-production monitoring when 30-50% of manufacturing is complete.",
+      path: "/services/during-production-inspection"
     },
     {
       icon: CheckSquare,
-      title: "Garment Final Inspection",
-      description: "Thorough examination of finished garments before shipping.",
-      path: "/services/garment-final-inspection"
+      title: "Final Random Inspection",
+      description: "Comprehensive final inspection when 100% of goods are produced and 80% packed.",
+      path: "/services/final-random-inspection"
     },
     {
       icon: Truck,
-      title: "Container Loading",
-      description: "Verification of proper packing and loading for safe transportation.",
-      path: "/services/container-loading"
+      title: "100% Full Check Inspection",
+      description: "Complete quality check with stationed QC team ensuring every piece is inspected.",
+      path: "/services/full-check-inspection"
     }
   ];
 

@@ -9,104 +9,104 @@ const ServiceDetail = () => {
   const { serviceType } = useParams();
 
   const serviceData = {
-    "fabric-inspection": {
-      title: "Fabric Inspection",
-      description: "Comprehensive fabric quality analysis including weight, color, and defect detection.",
+    "pre-production-inspection": {
+      title: "Pre-Production Inspection (PPI)",
+      description: "Comprehensive pre-production analysis completed right before mass production begins.",
       features: [
-        "Weaving or knitting defects detection",
-        "Color consistency analysis", 
-        "Printing quality assessment",
-        "Dimensional stability testing",
-        "Weight and density verification",
-        "Finish quality evaluation"
+        "Vendor readiness confirmation",
+        "Order requirements verification", 
+        "Sample testing in laboratory",
+        "Production schedule assessment",
+        "Quality problem prediction",
+        "Golden sample matching test"
       ],
       process: [
-        "Sample collection and preparation",
-        "Visual inspection using standardized lighting",
-        "Physical testing for weight and dimensions",
-        "Defect classification and documentation",
-        "Detailed report generation",
-        "Quality rating and recommendations"
+        "Vendor evaluation and factory assessment",
+        "Order specification verification",
+        "Sample collection and laboratory testing",
+        "Production schedule review",
+        "Golden sample matching test setup",
+        "Detailed report with recommendations"
       ]
     },
-    "first-batch-inspection": {
-      title: "First Batch Inspection", 
-      description: "Critical validation of initial production to ensure quality standards before full-scale manufacturing.",
+    "initial-production-inspection": {
+      title: "Initial Production Inspection (IPI)", 
+      description: "Early-stage production verification when 20-50 pieces are ready for measurement and workmanship checks.",
       features: [
-        "Material quality verification",
-        "Construction and assembly evaluation",
-        "Appearance and finish assessment", 
-        "Sizing and measurement verification",
+        "Early stage production verification",
+        "Measurement accuracy checks",
+        "Workmanship quality assessment", 
+        "Sample compliance verification",
+        "Production method validation",
+        "Quality standard confirmation"
+      ],
+      process: [
+        "Initial production sample collection",
+        "Measurement verification against specifications",
+        "Workmanship quality evaluation",
+        "Sample compliance assessment",
+        "Production method review",
+        "Quality standard confirmation report"
+      ]
+    },
+    "during-production-inspection": {
+      title: "During Production Inspection (DPI)",
+      description: "Mid-production monitoring when 30-50% of manufacturing is complete.",
+      features: [
+        "Mid-production quality monitoring",
+        "AQL appearance inspection",
+        "Size and weight verification",
+        "Functionality and accessories check", 
+        "Labelling and logo inspection",
+        "Raw materials assessment"
+      ],
+      process: [
+        "Production progress assessment",
+        "Random sampling from production line",
+        "AQL-based appearance inspection",
+        "Dimensional and weight verification",
         "Functionality testing",
-        "Packaging evaluation"
-      ],
-      process: [
-        "Initial sample review",
-        "Quality standard verification",
-        "Construction analysis",
-        "Measurement verification",
-        "Defect identification",
-        "Approval or rejection recommendation"
+        "Raw materials and packaging review"
       ]
     },
-    "garment-inline-inspection": {
-      title: "Garment In-Line Inspection",
-      description: "Real-time production monitoring to identify and correct issues during manufacturing.",
+    "final-random-inspection": {
+      title: "Final Random Inspection (FRI)",
+      description: "Comprehensive final inspection when 100% of goods are produced and 80% packed.",
       features: [
-        "Real-time quality monitoring",
-        "Recurring defect identification",
-        "Process improvement recommendations",
-        "Quick corrective action implementation", 
-        "Production efficiency assessment",
-        "Quality trend analysis"
+        "Complete production conformity check",
+        "Specification compliance verification",
+        "Pre-shipment quality assurance",
+        "On-site product inspection",
+        "Quality requirement validation", 
+        "Client-specific requirements check"
       ],
       process: [
-        "Production line setup review",
-        "Random sampling during production",
-        "Real-time defect tracking",
-        "Immediate feedback to production team",
-        "Corrective action monitoring",
-        "Process optimization recommendations"
-      ]
-    },
-    "garment-final-inspection": {
-      title: "Garment Final Inspection",
-      description: "Thorough examination of finished garments before shipping to ensure complete quality compliance.",
-      features: [
-        "Visual inspection for defects",
-        "Measurement verification",
-        "Construction quality assessment",
-        "Accessories and trim evaluation",
-        "Packaging and labeling verification", 
-        "Safety and compliance checks"
-      ],
-      process: [
-        "Random sampling from finished goods",
-        "Comprehensive visual inspection",
-        "Measurement verification against specs",
-        "Function and durability testing",
+        "Final production sampling",
+        "Comprehensive quality assessment",
+        "Specification compliance verification",
+        "Packaging and labeling inspection",
         "Documentation review",
         "Final quality certification"
       ]
     },
-    "container-loading": {
-      title: "Container Loading Supervision",
-      description: "Ensuring proper packing, loading, and securing of products for safe transportation.",
+    "full-check-inspection": {
+      title: "100% Full Check Inspection",
+      description: "Complete quality check with stationed QC team ensuring every piece is inspected.",
       features: [
-        "Quantity verification",
-        "Packaging condition assessment", 
-        "Loading arrangement evaluation",
-        "Securing and bracing verification",
-        "Container condition inspection",
-        "Documentation verification"
+        "Dedicated on-site QC team",
+        "100% product inspection coverage", 
+        "Individual piece examination",
+        "Complete repacking service",
+        "Defective goods separation",
+        "Quality assurance guarantee"
       ],
       process: [
-        "Pre-loading container inspection",
-        "Product quantity verification",
-        "Packaging integrity check",
-        "Loading supervision and arrangement",
-        "Securing and bracing verification",
-        "Final documentation and sealing"
+        "QC team deployment at factory",
+        "Individual product inspection setup",
+        "Comprehensive quality checking",
+        "Defective goods identification and sorting",
+        "Complete product repacking",
+        "Final quality assurance report"
       ]
     }
   };
@@ -190,8 +190,11 @@ const ServiceDetail = () => {
               <h3 className="text-2xl font-semibold mb-4 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
                 Ready to Get Started?
               </h3>
-              <p className="text-gray-800 mb-6">
+              <p className="text-gray-800 mb-4">
                 Contact us today to discuss your {service.title.toLowerCase()} requirements and get a customized quote.
+              </p>
+              <p className="text-gray-600 mb-6 font-medium">
+                All inspections are conducted by experts with in-depth knowledge of the latest inspection techniques and technology.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white">
