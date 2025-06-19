@@ -1,3 +1,4 @@
+
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
@@ -85,7 +86,7 @@ const Services = () => {
               </h1>
               <div className="max-w-4xl mx-auto mb-8">
                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                  CIA provides inspection services for manufacturers, retailers, traders, and international buyers. Our independent pre-shipment inspections identify potential defects and inconsistencies, safeguarding against costly import risks and product recalls. We conduct on-site inspections before, during, and after production, with compliance experts verifying specifications against factory output according to ISO standards. Our experienced inspectors ensure products meet all regulatory, voluntary, and client-specific requirements in the textile and apparel industries.
+                  CIA provides inspection services for manufacturers, retailers, traders, and international buyers across diverse industries including textiles, apparels, furniture, home decors, cookware, leather goods, footwear, sports products, luggage, fashion accessories, electrical and electronics, hardgoods, stationery, and toys. Our independent pre-shipment inspections identify potential defects and inconsistencies, safeguarding against costly import risks and product recalls. We conduct on-site inspections before, during, and after production, with compliance experts verifying specifications against factory output according to ISO standards. Our experienced inspectors ensure products meet all regulatory, voluntary, and client-specific requirements across all these industries.
                 </p>
               </div>
             </div>
