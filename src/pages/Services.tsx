@@ -88,11 +88,6 @@ const Services = () => {
                   CIA provides inspection services for manufacturers, retailers, traders, and international buyers. Our independent pre-shipment inspections identify potential defects and inconsistencies, safeguarding against costly import risks and product recalls. We conduct on-site inspections before, during, and after production, with compliance experts verifying specifications against factory output according to ISO standards. Our experienced inspectors ensure products meet all regulatory, voluntary, and client-specific requirements in the textile and apparel industries.
                 </p>
               </div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Colombus Inspection Agency offers a comprehensive range of quality inspection services 
-                tailored to the textile and apparel industries. Our experienced team ensures your products 
-                meet all required standards and specifications.
-              </p>
             </div>
             
             <div className="max-w-4xl mx-auto">
