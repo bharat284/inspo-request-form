@@ -1,5 +1,7 @@
+
 import { MapPin, Mail, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export const FooterV3 = () => {
   return (
@@ -25,22 +27,45 @@ export const FooterV3 = () => {
             <div>
               <h4 className="text-sm font-medium mb-3 text-cia-brightpurple">Certifications</h4>
               <div className="flex gap-3">
-                <div className="group cursor-pointer">
-                  <img 
-                    src="/lovable-uploads/355c844f-b856-4b5b-a775-63a754cb6a9a.png" 
-                    alt="ISO 9001:2015 Certificate" 
-                    className="h-16 w-12 object-cover rounded border border-cia-brightpurple/20 hover:shadow-md transition-shadow"
-                  />
-                  <p className="text-xs text-gray-500 mt-1 text-center">ISO 9001:2015</p>
-                </div>
-                <div className="group cursor-pointer">
-                  <img 
-                    src="/lovable-uploads/42ffeaf3-2701-48f2-8844-f453a2becec0.png" 
-                    alt="UDYAM Registration Certificate" 
-                    className="h-16 w-12 object-cover rounded border border-cia-brightpurple/20 hover:shadow-md transition-shadow"
-                  />
-                  <p className="text-xs text-gray-500 mt-1 text-center">UDYAM Reg.</p>
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="group cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/355c844f-b856-4b5b-a775-63a754cb6a9a.png" 
+                        alt="ISO 9001:2015 Certificate" 
+                        className="h-16 w-12 object-cover rounded border border-cia-brightpurple/20 hover:shadow-md transition-shadow"
+                      />
+                      <p className="text-xs text-gray-500 mt-1 text-center">ISO 9001:2015</p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl w-full">
+                    <img 
+                      src="/lovable-uploads/355c844f-b856-4b5b-a775-63a754cb6a9a.png" 
+                      alt="ISO 9001:2015 Certificate - Full View" 
+                      className="w-full h-auto object-contain"
+                    />
+                  </DialogContent>
+                </Dialog>
+                
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="group cursor-pointer">
+                      <img 
+                        src="/lovable-uploads/42ffeaf3-2701-48f2-8844-f453a2becec0.png" 
+                        alt="UDYAM Registration Certificate" 
+                        className="h-16 w-12 object-cover rounded border border-cia-brightpurple/20 hover:shadow-md transition-shadow"
+                      />
+                      <p className="text-xs text-gray-500 mt-1 text-center">UDYAM Reg.</p>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl w-full">
+                    <img 
+                      src="/lovable-uploads/42ffeaf3-2701-48f2-8844-f453a2becec0.png" 
+                      alt="UDYAM Registration Certificate - Full View" 
+                      className="w-full h-auto object-contain"
+                    />
+                  </DialogContent>
+                </Dialog>
               </div>
             </div>
           </div>
