@@ -1,11 +1,21 @@
-
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Award, Users, Calendar, Settings, Shield, Zap } from "lucide-react";
+import { useState } from "react";
 
 const Services = () => {
+  const [flippedCards, setFlippedCards] = useState<number[]>([]);
+
+  const toggleCard = (index: number) => {
+    setFlippedCards(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
+    );
+  };
+
   const services = [
     {
       title: "Pre-Production Inspection (PPI)",
@@ -100,9 +110,24 @@ const Services = () => {
   ];
 
   const advantages = [
-    { icon: Settings, title: "Customized Service", description: "Tailored solutions for your specific needs" },
-    { icon: Shield, title: "Accountability & Scalability", description: "Reliable and adaptable services" },
-    { icon: Zap, title: "Latest Technology", description: "Cutting-edge inspection methods" }
+    { 
+      icon: Settings, 
+      title: "Customized Service", 
+      description: "Tailored solutions for your specific needs",
+      backDescription: "We adapt our inspection processes to match your unique requirements and industry standards."
+    },
+    { 
+      icon: Shield, 
+      title: "Accountability & Scalability", 
+      description: "Reliable and adaptable services",
+      backDescription: "Our transparent reporting and flexible capacity ensure consistent quality at any scale."
+    },
+    { 
+      icon: Zap, 
+      title: "Latest Technology", 
+      description: "Cutting-edge inspection methods",
+      backDescription: "We employ state-of-the-art equipment and digital tools for precise quality assessments."
+    }
   ];
 
   return (
@@ -180,13 +205,27 @@ const Services = () => {
                   Why Choose CIA?
                 </h3>
                 
-                {/* Advantages Grid */}
+                {/* Advantages Grid with Flip Animation */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                   {advantages.map((advantage, index) => (
-                    <div key={index} className="bg-white border border-cia-brightpurple/20 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                      <advantage.icon className="h-8 w-8 text-cia-brightpurple mx-auto mb-3" />
-                      <h4 className="font-semibold text-cia-brightpurple mb-2">{advantage.title}</h4>
-                      <p className="text-gray-600 text-sm">{advantage.description}</p>
+                    <div 
+                      key={index} 
+                      className="relative h-32 cursor-pointer"
+                      onClick={() => toggleCard(index)}
+                    >
+                      <div className={`absolute inset-0 w-full h-full transition-transform duration-700 transform-style-preserve-3d ${flippedCards.includes(index) ? 'rotate-y-180' : ''}`}>
+                        {/* Front of card */}
+                        <div className="absolute inset-0 w-full h-full bg-white border border-cia-brightpurple/20 rounded-lg p-6 hover:shadow-lg transition-shadow backface-hidden">
+                          <advantage.icon className="h-8 w-8 text-cia-brightpurple mx-auto mb-3" />
+                          <h4 className="font-semibold text-cia-brightpurple mb-2">{advantage.title}</h4>
+                          <p className="text-gray-600 text-sm">{advantage.description}</p>
+                        </div>
+                        
+                        {/* Back of card */}
+                        <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-lg p-6 rotate-y-180 backface-hidden flex items-center justify-center">
+                          <p className="text-white text-sm text-center leading-relaxed">{advantage.backDescription}</p>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
