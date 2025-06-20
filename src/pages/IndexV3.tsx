@@ -6,6 +6,7 @@ import { ServicesOverviewV3 } from "@/components/ServicesOverviewV3";
 import { AboutSectionV3 } from "@/components/AboutSectionV3";
 import { TestimonialsV3 } from "@/components/TestimonialsV3";
 import { ContactSectionV3 } from "@/components/ContactSectionV3";
+import { ClientCarouselV3 } from "@/components/ClientCarouselV3";
 
 const IndexV3 = () => {
   return (
@@ -33,6 +34,7 @@ const IndexV3 = () => {
           </div>
         </section>
         
+        <ClientCarouselV3 />
         <ServicesOverviewV3 />
         <AboutSectionV3 />
         <TestimonialsV3 />
