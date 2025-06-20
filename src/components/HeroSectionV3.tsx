@@ -1,4 +1,3 @@
-
 import { Button } from "./ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Shield, Clock } from "lucide-react";
@@ -10,7 +9,7 @@ export const HeroSectionV3 = () => {
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cia-purple via-cia-brightpurple to-cia-accent bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cia-purple via-cia-brightpurple to-cia-accent bg-clip-text text-transparent">
               Trusted Third-Party Inspection Agency for Quality Control & Compliance
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
