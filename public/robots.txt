@@ -1,14 +1,19 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemaps
+Sitemap: https://colombusinspectionagency.com/sitemap.xml
+
+# Block access to admin/private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages for SEO
+Allow: /services/
+Allow: /about
+Allow: /contact
+Allow: /inspection-form
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

@@ -11,13 +11,10 @@ export const HeroSectionV3 = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cia-purple via-cia-brightpurple to-cia-accent bg-clip-text text-transparent">
-              Quality Inspection
-              <br />
-              <span className="text-cia-brightpurple">Excellence</span>
+              Trusted Third-Party Inspection Agency for Quality Control & Compliance
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
-              Your trusted partner in textile and apparel quality control. 
-              Ensuring excellence from fabric to finished goods.
+              Reliable third-party inspection services for global trade. We provide comprehensive pre-shipment inspection, factory audits, and container loading checks to minimize import risks and ensure product quality.
             </p>
           </div>
 
@@ -46,18 +43,18 @@ export const HeroSectionV3 = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
             <div className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white">
               <CheckCircle className="h-12 w-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Certified Quality</h3>
-              <p className="text-gray-100">International standards compliance with detailed reporting</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Certified Quality Control</h3>
+              <p className="text-gray-100">International standards compliance with detailed inspection reports</p>
             </div>
             <div className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white">
               <Clock className="h-12 w-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Fast Turnaround</h3>
-              <p className="text-gray-100">Quick inspection services without compromising quality</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Faster Turnaround</h3>
+              <p className="text-gray-100">Quick pre-shipment inspection services without compromising quality</p>
             </div>
             <div className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white">
               <Shield className="h-12 w-12 text-white mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Trusted Expertise</h3>
-              <p className="text-gray-100">Years of experience in textile and apparel inspection</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Global Standards</h3>
+              <p className="text-gray-100">Years of experience in third-party inspection for international buyers</p>
             </div>
           </div>
         </div>

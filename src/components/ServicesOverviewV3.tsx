@@ -55,10 +55,10 @@ export const ServicesOverviewV3 = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cia-purple to-cia-brightpurple bg-clip-text text-transparent">
-            Our Services
+            Comprehensive Pre-Shipment Inspection Services
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive quality inspection services tailored to the textile and apparel industries
+            Third-party inspection services tailored for quality control and compliance in textile, apparel, and manufacturing industries
           </p>
         </div>
 
@@ -66,6 +66,11 @@ export const ServicesOverviewV3 = () => {
           {services.map((service, index) => (
             <div key={index} className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-6 border border-cia-brightpurple/20 text-white hover:transform hover:scale-105 transition-all duration-300">
               <div className="text-center">
+                <img 
+                  src={service.image} 
+                  alt={`${service.title} - Inspector verifying quality control process`}
+                  className="w-full h-32 object-cover rounded-lg mb-4"
+                />
                 <service.icon className="h-12 w-12 text-white mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-100 mb-6">{service.description}</p>
@@ -81,6 +86,12 @@ export const ServicesOverviewV3 = () => {
         </div>
 
         <div className="text-center">
+          <h3 className="text-2xl font-bold mb-4 text-cia-brightpurple">
+            Factory Audits to Ensure Supplier Reliability
+          </h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Detailed reports with faster turnaround times. Our global inspection standards help minimize defects and shipping errors for international buyers.
+          </p>
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-cia-brightpurple to-cia-accent text-white hover:from-cia-accent hover:to-cia-brightpurple"
