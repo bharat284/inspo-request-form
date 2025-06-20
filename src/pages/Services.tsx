@@ -1,3 +1,4 @@
+
 import { MainNavigationV3 } from "@/components/MainNavigationV3";
 import { FooterV3 } from "@/components/FooterV3";
 import { Button } from "@/components/ui/button";
@@ -17,7 +18,8 @@ const Services = () => {
         "Quality problem prediction",
         "Golden sample matching test"
       ],
-      path: "/services/pre-production-inspection"
+      path: "/services/pre-production-inspection",
+      image: "/lovable-uploads/2a2ff791-1ff5-40a8-8c5b-54b6d44397ab.png"
     },
     {
       title: "Initial Production Inspection (IPI)",
@@ -30,7 +32,8 @@ const Services = () => {
         "Production method validation",
         "Quality standard confirmation"
       ],
-      path: "/services/initial-production-inspection"
+      path: "/services/initial-production-inspection",
+      image: "/lovable-uploads/cd4323d0-ea68-403f-8d67-cd6dfbfca4cd.png"
     },
     {
       title: "During Production Inspection (DPI)",
@@ -43,7 +46,8 @@ const Services = () => {
         "Labelling and logo inspection",
         "Raw materials assessment"
       ],
-      path: "/services/during-production-inspection"
+      path: "/services/during-production-inspection",
+      image: "/lovable-uploads/1867e35a-92a8-42ed-92f9-4e408efb695d.png"
     },
     {
       title: "Final Random Inspection (FRI)",
@@ -56,7 +60,8 @@ const Services = () => {
         "Quality requirement validation",
         "Client-specific requirements check"
       ],
-      path: "/services/final-random-inspection"
+      path: "/services/final-random-inspection",
+      image: "/lovable-uploads/5d6489e8-3477-41e6-a084-f744cf2d2848.png"
     },
     {
       title: "100% Full Check Inspection",
@@ -69,7 +74,22 @@ const Services = () => {
         "Defective goods separation",
         "Quality assurance guarantee"
       ],
-      path: "/services/full-check-inspection"
+      path: "/services/full-check-inspection",
+      image: "/lovable-uploads/c98536be-79ec-466b-93fc-293608bb14aa.png"
+    },
+    {
+      title: "Container Loading Inspection",
+      description: "Container Loading Inspection ensures that your products are properly loaded, secured, and protected during transportation. Our inspectors verify proper packaging, loading procedures, container condition, and securing methods to prevent damage during transit. This inspection is crucial for maintaining product quality from factory to destination.",
+      features: [
+        "Container condition assessment",
+        "Proper loading verification",
+        "Packaging integrity check",
+        "Securing methods validation",
+        "Loading procedure monitoring",
+        "Transit protection assurance"
+      ],
+      path: "/services/container-loading-inspection",
+      image: "/lovable-uploads/d2c7f143-709a-4c21-b304-fd8ea17589c3.png"
     }
   ];
 
@@ -123,23 +143,34 @@ const Services = () => {
               <div className="grid gap-12 mb-12">
                 {services.map((service, index) => (
                   <div key={index} className="bg-gradient-to-br from-cia-purple to-cia-brightpurple rounded-xl p-8 border border-cia-brightpurple/20 text-white hover:transform hover:scale-105 transition-all duration-300">
-                    <h2 className="text-2xl font-semibold mb-4 text-white">
-                      {service.title}
-                    </h2>
-                    <p className="mb-4 text-gray-100">
-                      {service.description}
-                    </p>
-                    <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-100">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx}>{feature}</li>
-                      ))}
-                    </ul>
-                    <Button 
-                      className="bg-white text-cia-brightpurple hover:bg-gray-100"
-                      asChild
-                    >
-                      <Link to={service.path}>Learn More</Link>
-                    </Button>
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
+                      <div className="lg:col-span-2">
+                        <h2 className="text-2xl font-semibold mb-4 text-white">
+                          {service.title}
+                        </h2>
+                        <p className="mb-4 text-gray-100">
+                          {service.description}
+                        </p>
+                        <ul className="list-disc pl-6 mb-6 space-y-2 text-gray-100">
+                          {service.features.map((feature, idx) => (
+                            <li key={idx}>{feature}</li>
+                          ))}
+                        </ul>
+                        <Button 
+                          className="bg-white text-cia-brightpurple hover:bg-gray-100"
+                          asChild
+                        >
+                          <Link to={service.path}>Learn More</Link>
+                        </Button>
+                      </div>
+                      <div className="lg:col-span-1">
+                        <img 
+                          src={service.image} 
+                          alt={service.title}
+                          className="w-full h-48 object-cover rounded-lg shadow-lg"
+                        />
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>

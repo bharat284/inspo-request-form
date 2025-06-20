@@ -88,7 +88,7 @@ export const ClientCarouselV3 = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes scroll-right {
           0% {
             transform: translateX(0);
